@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Our Story · The Dessert Lounge</title>
+<meta name="description" content="The story behind The Dessert Lounge, Sector 62, Noida.">
+<link rel="icon" href="photos/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<nav><div class="wrap">
+<a class="logo" href="index.html" aria-label="The Dessert Lounge home"><img src="photos/logo.png" alt="" width="40" height="40"><span>The Dessert Lounge</span></a>
+<div class="links" id="links">
+<a href="index.html#menu">Menu</a><a href="treats.html">Treats</a><a href="index.html#custom">Custom Cakes</a><a href="index.html#hampers">Gift Hampers</a><a href="index.html#reviews">Reviews</a><a href="index.html#visit">Visit Us</a><a href="our-story.html">Our Story</a>
+<a class="btn" href="index.html#menu">Order Now</a></div>
+<div><button class="icon" id="theme" aria-label="Toggle dark mode">Dark</button><button class="icon" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button></div>
+</div></nav>
+<main class="story"><h1 id="t"></h1><div id="b"></div><p class="sig" id="sg"></p></main>
+<footer><div class="wrap"><p class="logo" style="justify-content:center;font-size:1.4rem"><img src="photos/logo.png" alt="" width="44" height="44"><span>The Dessert Lounge</span></p>
+<p style="margin:8px 0">Sweet moments, made fresh. Sector 62, Noida.</p>
+<p><a href="index.html#menu">Menu</a><a href="treats.html">Treats</a><a href="index.html#custom">Custom Cakes</a><a href="index.html#hampers">Gift Hampers</a><a href="index.html#reviews">Reviews</a><a href="index.html#visit">Visit Us</a><a href="our-story.html">Our Story</a></p>
+<p id="fssaiP" hidden style="margin-top:10px">FSSAI Lic. No. <span id="fssai"></span></p>
+<p style="margin:12px 0">Made with care in Noida</p><a class="btn alt" href="#">↑ Back to top</a></div></footer>
+<script src="contact.js"></script>
+<script>
+/* ============ EDIT YOUR STORY HERE ============ */
+const STORY = {
+  title: "Our Story",
+  // Separate paragraphs with a blank line. Leave empty to show the "coming soon" message.
+  body: "",
+  signature: ""          // e.g. "Name, Founder"
+};
+/* ============ END ============ */
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('#t').textContent=STORY.title;
+$('#b').innerHTML=STORY.body?STORY.body.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join(''):'<p>Our story is coming soon.</p>';
+$('#sg').textContent=STORY.signature;
+if(CONTACT.fssai){$('#fssaiP').hidden=false;$('#fssai').textContent=CONTACT.fssai}
+const root=document.documentElement;function setTheme(t){root.dataset.theme=t;$('#theme').textContent=t==='dark'?'Light':'Dark'}
+setTheme(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+$('#theme').onclick=()=>setTheme(root.dataset.theme==='dark'?'light':'dark');
+$('#burger').onclick=e=>{const o=$('#links').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+</script></body></html>
