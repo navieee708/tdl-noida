@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Dessert Lounge · Sector 62, Noida</title>
+<meta name="description" content="Sweet moments, made fresh. Pure vegetarian pastries, jar cakes, gift hampers and custom designer cakes in Sector 62, Noida.">
+<meta property="og:title" content="The Dessert Lounge · Sector 62, Noida">
+<meta property="og:description" content="Sweet moments, made fresh. Custom cakes, pastries and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="photos/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap">
+<button class="logo" id="logo" aria-label="The Dessert Lounge, back to top"><img src="photos/logo.png" alt="" width="40" height="40"><span>The Dessert Lounge</span></button>
+<div class="links" id="links">
+<a href="#menu">Menu</a><a href="treats.html">Treats</a><a href="#custom">Custom Cakes</a><a href="#hampers">Gift Hampers</a><a href="#reviews">Reviews</a><a href="#visit">Visit Us</a><a href="our-story.html">Our Story</a>
+<a class="btn" href="#menu">Order Now</a></div>
+<div><button class="icon" id="theme" aria-label="Toggle dark mode">Dark</button><button class="icon" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button></div>
+</div></nav>
+
+<header class="hero" id="top">
+<div class="wrap"><div>
+<h1>Sweet moments, made fresh.</h1>
+<p>Handcrafted pastries, jar cakes and custom designer cakes, made fresh to order in Sector 62, Noida.</p>
+<div class="row"><a class="btn" href="#menu">See the Menu</a><a class="btn alt" id="heroWa" href="#" target="_blank" rel="noopener">Order on WhatsApp</a></div></div>
+<img class="heroimg" src="photos/crown-cake.jpg" alt="Pink buttercream birthday cake topped with a jewelled crown" width="627" height="900" fetchpriority="high">
+</div>
+
+</header>
+
+<div class="strip" id="strip"></div>
+
+<section id="menu"><div class="wrap">
+<h2>Our Menu</h2><p class="sub">Select your items, review your order, and send it to us on WhatsApp for confirmation.</p>
+<div class="tabs" role="tablist" aria-label="Menu categories" id="tabs"></div>
+<input id="q" type="search" placeholder="Search the menu…" aria-label="Search the menu">
+<div class="grid" id="grid" role="tabpanel" aria-live="polite"></div>
+<p style="text-align:center;margin-top:28px"><a class="btn alt" href="treats.html">Browse snacks, meals &amp; beverages</a></p>
+</div></section>
+
+<button class="btn" id="fab" aria-label="Open my order"> My Order <span id="cnt">0</span></button>
+<aside id="sheet" aria-label="My order" aria-hidden="true">
+<div class="line"><h3>My Order</h3><button class="icon" id="close" aria-label="Close order">Close</button></div>
+<div id="lines"></div><div class="line" id="totline" hidden><b>Total (approx.)</b><b class="price" id="total">₹0</b></div>
+<p style="font-size:.85rem;opacity:.85;margin:8px 0">Please allow at least 6 hours’ notice. We accept UPI. We will confirm your order and the amount on WhatsApp; no payment is taken on this website.</p>
+<button class="btn" id="send" style="width:100%;justify-content:center"> Send order on WhatsApp</button></aside>
+
+<section class="band-a"><div class="wrap reveal"><div class="cust" id="custom">
+<div><h2 style="text-align:left">Custom &amp; Designer Cakes</h2>
+<p>Share your occasion, flavour and design ideas and we will confirm the design, price and timing with you directly on WhatsApp. Please allow at least 6 hours’ notice.</p>
+</div>
+<form id="cf" novalidate>
+<label>Your name<input name="name" required autocomplete="name"><span class="err"></span></label>
+<div class="two"><label>Occasion<select name="occ"><option>Birthday</option><option>Anniversary</option><option>Wedding</option><option>Baby shower</option><option>Other</option></select></label>
+<label>Flavour<input name="flav" required placeholder="e.g. Pineapple"><span class="err"></span></label></div>
+<div class="two"><label>Size / weight<select name="size"><option>½ kg</option><option>1 kg</option><option>1.5 kg</option><option>2 kg+</option></select></label>
+<label>Date needed<input type="date" name="date" required><span class="err"></span></label></div>
+<label class="chk"><input type="checkbox" name="eggless"> Eggless</label>
+<label>Message on cake<input name="msg" maxlength="40"></label>
+<button class="btn" type="submit" style="justify-content:center"> Send design on WhatsApp</button></form></div><h3 class="gh">Recent custom cakes</h3><div class="gallery" id="gal"></div></div></section>
+
+<section class="band-b" id="hampers"><div class="wrap reveal"><h2>Gift Boxes &amp; Hampers</h2><p class="sub">Packaged dessert hampers and gift boxes. Message us with the occasion and quantity and we will confirm the options with you.</p><div class="gallery" id="hgal"></div><p style="text-align:center;margin-top:22px"><a class="btn" id="hwa" href="#" target="_blank" rel="noopener">Enquire about hampers</a></p></div></section>
+
+<section class="rev" id="reviews"><div class="wrap">
+<div class="badge">Rated 5.0 on Google</div><h2>What our guests say</h2><p class="sub">&nbsp;</p>
+<div class="car" id="car" tabindex="0" aria-roledescription="carousel" aria-label="Customer reviews"><div id="slide" aria-live="polite"></div>
+<div class="dots" id="dots"><button class="arrow" id="prev" aria-label="Previous review">‹</button><span id="dd" style="display:flex;gap:8px"></span><button class="arrow" id="next" aria-label="Next review">›</button></div></div>
+<div class="topics" id="topics"></div></div></section>
+
+<section id="visit"><div class="wrap">
+<h2>Visit Us</h2><p class="sub">Find us in Sector 62, Noida.</p>
+<div class="visit"><div class="box reveal"><h3>The Dessert Lounge</h3>
+<p><span id="area"></span></p><p><a id="ph1" href="#"></a> · <a id="ph2" href="#"></a></p>
+<p><span id="hours"></span></p><p>Order notice: at least 6 hours. UPI accepted.</p><p><a id="ig" href="#" target="_blank" rel="noopener"></a></p>
+<p style="margin-top:14px"><a class="btn" id="dir" href="#" target="_blank" rel="noopener">Get directions</a></p></div>
+<div class="map reveal"><!-- MAP: paste a Google Maps embed <iframe> here later -->Map coming soon.<br>Sector 62, Noida</div></div></div></section>
+
+<footer><div class="wrap"><p class="logo" style="justify-content:center;font-size:1.4rem"><img src="photos/logo.png" alt="" width="44" height="44"><span>The Dessert Lounge</span></p>
+<p style="margin:8px 0">Sweet moments, made fresh. Sector 62, Noida.</p>
+<p><a href="#menu">Menu</a><a href="treats.html">Treats</a><a href="#custom">Custom Cakes</a><a href="#hampers">Gift Hampers</a><a href="#reviews">Reviews</a><a href="#visit">Visit Us</a><a href="our-story.html">Our Story</a></p>
+<p id="fssaiP" hidden style="margin-top:10px">FSSAI Lic. No. <span id="fssai"></span></p>
+<p style="margin:12px 0">Made with care in Noida</p><a class="btn alt" href="#top">↑ Back to top</a></div></footer>
+
+<script type="application/ld+json" id="ld"></script>
+<script src="contact.js"></script>
+<script>
+/* ============ EDIT YOUR CONTENT HERE ============ */
+const SITE = {
+  name: "The Dessert Lounge",
+  tagline: "Sweet moments, made fresh.",
+  whatsapp: CONTACT.whatsapp,                 // WhatsApp number, country code first, digits only
+  phones: CONTACT.phones,
+  area: "Sector 62, Noida",                 // area only, no street address
+  hours: "Opening hours: REPLACE ME",       // REPLACE ME
+  instagram: "",                            // REPLACE ME, e.g. "https://instagram.com/yourhandle"
+  mapsLink: "https://www.google.com/maps/search/?api=1&query=The+Dessert+Lounge+Sector+62+Noida",
+  fssai: CONTACT.fssai,
+  highlights: ["Pure vegetarian","FSSAI licensed","Custom & designer cakes","Rated 5.0 on Google"],
+  // Add a photo to any item with  img: "photos/name.jpg"
+  // To show a price on a card, add p:100 to that item. To add a photo, add img:"photos/name.jpg".
+  menu: {
+    "Pastries": [
+      {n:"Pineapple Pastry"},{n:"Chocolate Truffle"},{n:"Death by Chocolate"},{n:"Mango Delight"},
+      {n:"White Chocolate French Vanilla"},{n:"Chocolate Fudge"},{n:"Belgian Chocolate"}],
+    "Jar Cakes & Tubs": [
+      {n:"Cookies & Crumb Jar Cake"},{n:"Rasmalai Fusion"},{n:"Oreo Mousse"},{n:"Red Velvet Jar"},{n:"Brownie Sundae Tub"}]
+    // Add more categories here once you send the full list, e.g. "Cakes": [{n:"..."}]
+  },
+  gallery: [
+    {f:"crown-cake",a:"Pink buttercream birthday cake with a jewelled crown"},
+    {f:"butterfly-cake",a:"Lilac striped birthday cake with butterflies and gold spheres"},
+    {f:"twin-cakes",a:"Two coordinated birthday cakes, one floral pink and one jungle theme"},
+    {f:"theme-cakes",a:"Pair of themed cakes, a superhero cake and a princess cake"},
+    {f:"bear-cake",a:"Blue half-birthday cake with fondant teddy bears and stars"},
+    {f:"rosette-cake",a:"Chocolate birthday cake with piped rosettes and gold pearls"},
+    {f:"krishna-cake",a:"Janmashtami cake with peacock feathers and a matka"},
+    {f:"number-cake",a:"Number four cake with superhero panels"},
+    {f:"tricolour-cake",a:"Tricolour birthday cake with piped borders"},
+    {f:"family-cake",a:"White cake with lettering and purple hearts"}],
+  hampers: [
+    {f:"hamper-tray",a:"Gift hamper in a wooden tray wrapped in pink tulle"},
+    {f:"hamper-jars",a:"Wooden gift crate with jars of snacks and a loaf cake"},
+    {f:"gift-bags",a:"Rows of packaged gift bags with dessert jars"},
+    {f:"dry-cake",a:"Almond dry cake with a Happy Birthday topper"}],
+  reviews: [
+    {t:"Awesome cakes, tasty pastries and lip smacking cup cakes."},
+    {t:"Great place with amazingly good food. A must try if you have a sweet tooth."},
+    {t:"I ordered this cake and it was very light and at the same time yummy."},
+    {t:"Truly pleasant experience!! Delightful flavors and gorgeous designs!! Apart from their regular cakes, which are just super awesome, their dry cakes and cookies are just out of this world... low on sugar and extremely tasty."},
+    {t:"Yesterday’s cake was amazing, really like real pineapple bites with fresh cream. The texture, the design, the finishing and the taste was truly…"},
+    {t:"The moment I stepped in, I was charmed by the cozy ambience and friendly atmosphere. The service was impeccable…"},
+    {t:"Very good cakes and pastries. Right from taste and texture everything is perfect. The cup cakes are worth trying."}],
+  topics: ["customized cakes","cup cakes","cozy ambience","birthday party"]
+};
+/* ============ END EDITABLE CONTENT ============ */
+
+const $=s=>document.querySelector(s), RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const wa=t=>`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(t)}`;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// theme
+const root=document.documentElement;
+function setTheme(t){root.dataset.theme=t;$('#theme').textContent=t==='dark'?'Light':'Dark'}
+setTheme(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+$('#theme').onclick=()=>setTheme(root.dataset.theme==='dark'?'light':'dark');
+$('#burger').onclick=e=>{const o=$('#links').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+$('#links').onclick=()=>$('#links').classList.remove('open');
+// static content
+$('#strip').innerHTML=SITE.highlights.map(h=>`<span class="chip">${esc(h)}</span>`).join('');
+$('#heroWa').href=wa("Hi The Dessert Lounge! I’d like to place an order ");
+$('#area').textContent=SITE.area;$('#hours').textContent=SITE.hours;$('#dir').href=SITE.mapsLink;
+SITE.phones.forEach((p,i)=>{const a=$('#ph'+(i+1));a.textContent=p;a.href='tel:'+p.replace(/\s/g,'')});
+const ig=$('#ig');if(SITE.instagram){ig.href=SITE.instagram;ig.textContent='Instagram'}else{ig.parentElement.hidden=true}
+$('#topics').innerHTML=SITE.topics.map(t=>`<span class="chip"> ${esc(t)}</span>`).join('');
+$('#ld').textContent=JSON.stringify({"@context":"https://schema.org","@type":"Bakery",name:SITE.name,telephone:SITE.phones,areaServed:"Sector 62, Noida",image:"photos/logo.png",address:{"@type":"PostalAddress",addressLocality:"Noida",addressRegion:"Uttar Pradesh",addressCountry:"IN"}});
+const fig=a=>a.map(g=>`<figure><img src="photos/${g.f}.jpg" alt="${esc(g.a)}" loading="lazy" decoding="async"></figure>`).join('');
+$('#gal').innerHTML=fig(SITE.gallery);$('#hgal').innerHTML=fig(SITE.hampers);
+$('#hwa').href=wa('Hi The Dessert Lounge! I would like to enquire about gift boxes and hampers.');
+if(SITE.fssai){$('#fssaiP').hidden=false;$('#fssai').textContent=SITE.fssai}
+// effects
+function burst(){}
+function rain(){}
+$('#logo').onclick=()=>scrollTo({top:0});
+// menu
+let cat=Object.keys(SITE.menu)[0],cart={};
+const tabs=$('#tabs');
+tabs.innerHTML=Object.keys(SITE.menu).map(c=>`<button class="tab" role="tab" aria-selected="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+tabs.onclick=e=>{const b=e.target.closest('.tab');if(!b)return;cat=b.dataset.c;tabs.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',t===b));$('#q').value='';render()};
+tabs.onkeydown=e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const t=[...tabs.children],i=t.indexOf(document.activeElement);t[(i+(e.key==='ArrowRight'?1:t.length-1))%t.length].focus()};
+$('#q').oninput=render;
+function render(){
+  const q=$('#q').value.trim().toLowerCase();
+  const items=q?Object.values(SITE.menu).flat().filter(i=>i.n.toLowerCase().includes(q)):SITE.menu[cat];
+  const g=$('#grid');g.style.animation='none';g.offsetWidth;g.style.animation='';
+  g.innerHTML=items.length?items.map(i=>{
+    const id=esc(i.n);
+    return `<article class="card">${i.img?`<div class="ph"><img src="${esc(i.img)}" alt="${id}" loading="lazy"></div>`:''}<h3>${id}</h3>${i.note?`<small>${esc(i.note)}</small>`:''}${i.p!=null?`<div class="price">₹${i.p}</div>`:''}<button class="btn" data-n="${id}">Add to enquiry</button></article>`}).join(''):'<p class="empty">No items found. Try a different search.</p>';
+}
+$('#grid').onclick=e=>{const b=e.target.closest('[data-n]');if(!b)return;const n=b.dataset.n.replace(/&amp;/g,'&');cart[n]=(cart[n]||0)+1;const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top);upd()};
+const price=n=>Object.values(SITE.menu).flat().find(i=>i.n===n)?.p||0;
+function upd(){
+  const ks=Object.keys(cart).filter(k=>cart[k]>0);let tot=0,c=0;
+  $('#lines').innerHTML=ks.length?ks.map(k=>{tot+=price(k)*cart[k];c+=cart[k];return `<div class="line"><span>${esc(k)}${price(k)?'<br><small>₹'+price(k)+'</small>':''}</span><span class="qty"><button data-k="${esc(k)}" data-d="-1" aria-label="Remove one ${esc(k)}">−</button><b>${cart[k]}</b><button data-k="${esc(k)}" data-d="1" aria-label="Add one ${esc(k)}">+</button></span></div>`}).join(''):'<p style="padding:12px 0">Your order is empty. Add items from the menu.</p>';
+  $('#totline').hidden=!tot;$('#total').textContent='₹'+tot;$('#cnt').textContent=c;$('#send').disabled=!c;$('#send').style.opacity=c?1:.5;
+}
+$('#lines').onclick=e=>{const b=e.target.closest('[data-k]');if(!b)return;const k=b.dataset.k.replace(/&amp;/g,'&');cart[k]=Math.max(0,cart[k]+ +b.dataset.d);upd()};
+const sheet=$('#sheet'),tog=o=>{sheet.classList.toggle('open',o);sheet.setAttribute('aria-hidden',!o)};
+$('#fab').onclick=()=>tog(true);$('#close').onclick=()=>tog(false);document.onkeydown=e=>{if(e.key==='Escape')tog(false)};
+$('#send').onclick=()=>{const ks=Object.keys(cart).filter(k=>cart[k]>0);if(!ks.length)return;let t=0;
+  const l=ks.map(k=>{t+=price(k)*cart[k];return `- ${k} × ${cart[k]}`+(price(k)?` = ₹${price(k)*cart[k]}`:'')});
+  burst(innerWidth/2,innerHeight/2,24);open(wa(`Hi The Dessert Lounge! I’d like to order:\n${l.join('\n')}${t?'\nTotal: ₹'+t:''}`),'_blank')};
+// custom cake form
+$('#cf').onsubmit=e=>{e.preventDefault();const f=e.target,d=new FormData(f);let ok=true;
+  ['name','flav','date'].forEach(k=>{const i=f[k],m=i.value.trim()?'':'Please fill this in';if(k==='date'&&i.value&&new Date(i.value)<new Date(new Date().toDateString()))i.nextElementSibling.textContent='Please pick a future date',ok=false;else{i.nextElementSibling.textContent=m;if(m)ok=false}});
+  if(!ok)return;const diet=f.eggless.checked?'Eggless':'No preference';
+  burst(innerWidth/2,innerHeight/2,24);
+  open(wa(`Hi The Dessert Lounge! Custom cake enquiry \nName: ${d.get('name')}\nOccasion: ${d.get('occ')}\nFlavour: ${d.get('flav')}\nSize: ${d.get('size')}\nDiet: ${diet}\nMessage on cake: ${d.get('msg')||'—'}\nDate needed: ${d.get('date')}`),'_blank')};
+// reviews carousel
+let ri=0,timer,paused=false;
+$('#dd').innerHTML=SITE.reviews.map((_,i)=>`<button data-i="${i}" aria-label="Review ${i+1}"></button>`).join('');
+function show(i){ri=(i+SITE.reviews.length)%SITE.reviews.length;const r=SITE.reviews[ri];
+  $('#slide').innerHTML=`<div class="slide"><div class="stars">Rated 5 out of 5</div><q>${esc(r.t)}</q><small>${r.a?esc(r.a)+' · ':''}Google review${r.x?' · '+esc(r.x):''}</small>${r.reply?`<div class="reply"><b>Owner replied:</b> ${esc(r.reply)}</div>`:''}</div>`;
+  [...$('#dd').children].forEach((b,k)=>b.setAttribute('aria-current',k===ri))}
+$('#prev').onclick=()=>show(ri-1);$('#next').onclick=()=>show(ri+1);$('#dd').onclick=e=>{if(e.target.dataset.i)show(+e.target.dataset.i)};
+const car=$('#car');car.onkeydown=e=>{if(e.key==='ArrowRight')show(ri+1);if(e.key==='ArrowLeft')show(ri-1)};
+['mouseenter','focusin'].forEach(v=>car.addEventListener(v,()=>paused=true));['mouseleave','focusout'].forEach(v=>car.addEventListener(v,()=>paused=false));
+let sx=0;car.ontouchstart=e=>sx=e.touches[0].clientX;car.ontouchend=e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40)show(ri+(d<0?1:-1))};
+if(!RM)setInterval(()=>{if(!paused)show(ri+1)},6000);
+// init
+render();upd();show(0);
+const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

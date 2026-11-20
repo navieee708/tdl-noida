@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Treats · The Dessert Lounge</title>
+<meta name="description" content="Pure vegetarian snacks, meals, beverages and desserts from The Dessert Lounge, Sector 62, Noida.">
+<link rel="icon" href="photos/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<nav><div class="wrap">
+<a class="logo" href="index.html" aria-label="The Dessert Lounge home"><img src="photos/logo.png" alt="" width="40" height="40"><span>The Dessert Lounge</span></a>
+<div class="links" id="links">
+<a href="index.html#menu">Menu</a><a href="treats.html">Treats</a><a href="index.html#custom">Custom Cakes</a><a href="index.html#hampers">Gift Hampers</a><a href="index.html#reviews">Reviews</a><a href="index.html#visit">Visit Us</a><a href="our-story.html">Our Story</a>
+<a class="btn" href="index.html#menu">Order Now</a></div>
+<div><button class="icon" id="theme" aria-label="Toggle dark mode">Dark</button><button class="icon" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button></div>
+</div></nav>
+<section id="menu"><div class="wrap">
+<h2>Treats</h2><p class="sub">Snacks, meals, beverages and desserts, all pure vegetarian. Choose your items and send your enquiry on WhatsApp. We will confirm availability, pricing and timing with you.</p>
+<div class="tabs" role="tablist" aria-label="Treat categories" id="tabs"></div>
+<input id="q" type="search" placeholder="Search treats…" aria-label="Search treats">
+<div class="grid" id="grid" role="tabpanel" aria-live="polite"></div>
+</div></section>
+<button class="btn" id="fab" aria-label="Open my order">My Order <span id="cnt">0</span></button>
+<aside id="sheet" aria-label="My order" aria-hidden="true">
+<div class="line"><h3>My Order</h3><button class="icon" id="close" aria-label="Close order">Close</button></div>
+<div id="lines"></div>
+<p style="font-size:.85rem;opacity:.85;margin:8px 0">Please allow at least 6 hours’ notice. We accept UPI. We will confirm your order and the amount on WhatsApp; no payment is taken on this website.</p>
+<button class="btn" id="send" style="width:100%">Send order on WhatsApp</button></aside>
+<footer><div class="wrap"><p class="logo" style="justify-content:center;font-size:1.4rem"><img src="photos/logo.png" alt="" width="44" height="44"><span>The Dessert Lounge</span></p>
+<p style="margin:8px 0">Sweet moments, made fresh. Sector 62, Noida.</p>
+<p><a href="index.html#menu">Menu</a><a href="treats.html">Treats</a><a href="index.html#custom">Custom Cakes</a><a href="index.html#hampers">Gift Hampers</a><a href="index.html#reviews">Reviews</a><a href="index.html#visit">Visit Us</a><a href="our-story.html">Our Story</a></p>
+<p id="fssaiP" hidden style="margin-top:10px">FSSAI Lic. No. <span id="fssai"></span></p>
+<p style="margin:12px 0">Made with care in Noida</p><a class="btn alt" href="#">↑ Back to top</a></div></footer>
+<script src="contact.js"></script>
+<script>
+/* ============ EDIT THE TREATS MENU HERE ============ */
+// Plain items are written as "Name". Items with a choice are written as ["Name", [options]].
+// To show a price later, change an item to {n:"Name", p:80}; options items to {n:"Name", o:[...], p:80}.
+const TEA=["Ginger Tea","Elaichi Tea","Masala Tea","Tulsi Ginger Tea"];
+const MENU={
+"Vada Pav":["Classic Vada Pav","Mumbaiya Original Vada Pav","Schezwan Vada Pav [1 Pav]","Mexican Salsa Vada Pav [1 Pav]","Peri Peri Vada Pav [1 Pav]","Herby Cheesy Vada Pav [1 Pav]","Crunchy Crispy Vada Pav","Bhajiya Pav [1 Pav]","Bahubali Vada Pav [1 Pav]","Spicy Minty Paneer Vada Pav","Super Spicy Paneer Vada Pav","Aloo Tikki Double Decker Cheese Pav [Serves 1, 1 Pav]","Misal Pav Kolhapuri","Vada Pav Party Pack - 6 Pieces","Vada Pav Party Pack - 12 Pieces"],
+"Combos":[["Tea [200 ml] with Mumbai Vada Pav [1 Piece]",TEA],["Tea [200 ml] with Mumbai Vada Pav [2 Pieces]",TEA],["2 Tea [200 ml] with Mumbai Vada Pav [4 Pieces]",TEA],["Tea [220 ml] with 1 Poha with Bhujia",TEA],["Tea [220 ml] with 1 Khatta Meetha Poha with Bhujia",TEA],["Tea [200 ml] with 1 Mumbai Bhel Puri",TEA],["Tea [200 ml] with 1 Upma",TEA],["Tea [200 ml] with 1 Vermicelli Upma",TEA],["Tea [200 ml] with 1 Aloo Stuffed Paratha",TEA],["Tea [200 ml, 2 Cups] with 1 Paneer Paratha",TEA],["Tea [200 ml] with 2 Aloo Stuffed Paratha",TEA],["Tea [200 ml] with 2 Paneer Paratha",TEA],["Tea [200 ml] with Methi Mathri [2 Pieces]",TEA]],
+"All Day Breakfast":["Aloo Paratha - 1 Pc","Aloo Parathas - 2 Pcs","Paneer Paratha - 1 Pc","Paneer Paratha - 2 Pcs","Oats Veg Surprise Masala","Oats Tangy Tomato Masala","Oats Mixed Berries","Oats Herby Cheese","Bun Maska","Poha with Bhujia","Khatta Meetha Poha with Bhujia","Upma","Vermicelli Upma","Misal Pav Kolhapuri","Super Healthy Millet Khichdi","Millet Sooji Upma"],
+"Pasta":["White Sauce Pasta","Red Sauce Pasta"],
+"Burgers":["Masala Aloo Tikki Burger","Veggie Burger","Veggie Crunch Burger","Spinach Corn Burger","Veggie Cheezy Surprise Burger","Double-decker Maharaja Burger - Veg","Fiery Spicy Paneer Burger","Mint Paneer Burger"],
+"Sandwiches":["Aloo Pudina Masala Sandwich","Veggie Coleslaw Sandwich","Veggie Extravaganza Sandwich","Paneer Masala Sandwich"],
+"Wraps":["Veggie Delight Wrap","Veggie Spicy Herby Wrap","Veggie Cheesy Wrap","Spinach Corn Wrap","Crispy Aloo Wrap","Chatpata Paneer Wrap","Super Teekha Paneer Wrap"],
+"Snacks":["Methi Mathri [4 Pieces]","Aloo Patty","Paneer Patty","Maggi","Masala Maggi","Cheese Maggi","Peri Peri Maggi","French Fries","Cheese Fries","Masala Fries","Peri Peri Fries","Veggie Fingers [5 Pieces]","Cheese Corn Triangles [5 Pieces]","Potato Wedges","Nachos with Salsa","Cheesy Nachos with Salsa","Bread Pakoda [2 Pieces]","Bread Pakoda [4 Pieces]","Super Healthy Millet Khichdi","Millet Sooji Upma"],
+"Meals":["Mumbai Bhelpuri","Matar Kulche","Pav Bhaji [2 Pav]","Idli Sambhar [4 Pieces] with Coconut Chutney","Aloo Paratha - 1 Pc","Aloo Parathas - 2 Pcs","Chole Bhature [2 Bhature]","2 Khasta Kachori with Aloo Sabzi","2 Pyaaz Kachori with Aloo Sabzi","Misal Pav Kolhapuri","Veg Fried Rice and Manchurian","Paneer Paratha - 1 Pc","Paneer Paratha - 2 Pcs","Super Healthy Millet Khichdi"],
+"Hot Beverages":["Ginger Tea [200 ml, Serves 2]","Elaichi Tea [220 ml, Serves 2]","Masala Tea [220 ml, Serves 2]","Tulsi Ginger Tea [220 ml, Serves 2]","Classic Hot Coffee","French Vanilla Hot Coffee","Butterscotch Hot Coffee","Hazelnut Hot Coffee"],
+"Cold Beverages":["Vanilla Milkshake","Strawberry Milkshake","Chocolate Milkshake","Butterscotch Milkshake","Rose Milkshake","Cold Coffee Shake","Blackcurrant Milkshake","Oreo Cookie Shake","Chocolate Kitkat Shake","Classic Chocolate Brownie Shake","Double Brownie Chocolate Shake","Thums Up Soft Beverage [250 ml]","Coke Soft Beverage [250 ml]","Masala Chaach","Jeera Soda [200 ml]","Guava Real Fruit Juice [Tetra Pack, 180 ml]","Cold Coffee","Hazelnut Cold Coffee","Butterscotch Cold Coffee","French Vanilla Cold Coffee","Lemon Ice Tea","Peach Ice Tea","Aam Panna","JIVO Natural Mineral Water [500 ml]","JIVO Natural Mineral Water [1 litre]","Salted Lassi","Sweet Lassi","Sweet and Salted Lassi","Pineapple Lassi","Butterscotch Lassi","Strawberry Lassi","Blueberry Lassi","Virgin Mojito"],
+"Dessert":[["Chocolate Chip Cookies",["250 g","500 g","1 kg"]],"Chocolate Walnut Brownie [1 Piece]","Rasgulla [2 Pieces, Medium]"],
+"Dips":["Veg Mayonnaise Dip","Green Chutney Dip","Tandoori Mayonnaise Dip","Salsa Dip","Chipotle Dip","Honey Mustard Dip","Alfredo Cheese Dip","Mint Mayonnaise Dip"]
+};
+/* ============ END EDITABLE CONTENT ============ */
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const wa=t=>`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(t)}`;
+const root=document.documentElement;function setTheme(t){root.dataset.theme=t;$('#theme').textContent=t==='dark'?'Light':'Dark'}
+setTheme(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+$('#theme').onclick=()=>setTheme(root.dataset.theme==='dark'?'light':'dark');
+$('#burger').onclick=e=>{const o=$('#links').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+if(CONTACT.fssai){$('#fssaiP').hidden=false;$('#fssai').textContent=CONTACT.fssai}
+const cats=Object.keys(MENU);let cat=cats[0],cart={},list=[];
+$('#tabs').innerHTML=cats.map(c=>`<button class="tab" role="tab" aria-selected="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+$('#tabs').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;cat=b.dataset.c;document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',t===b));$('#q').value='';render()};
+$('#tabs').onkeydown=e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const t=[...$('#tabs').children],i=t.indexOf(document.activeElement);t[(i+(e.key==='ArrowRight'?1:t.length-1))%t.length].focus()};
+$('#q').oninput=render;
+function render(){
+  const q=$('#q').value.trim().toLowerCase();
+  let items=(q?cats.flatMap(c=>MENU[c]):MENU[cat]).map(i=>Array.isArray(i)?{n:i[0],o:i[1]}:typeof i==='string'?{n:i}:i);
+  if(q){const seen=new Set();items=items.filter(i=>i.n.toLowerCase().includes(q)&&!seen.has(i.n)&&seen.add(i.n))}
+  list=items;
+  $('#grid').innerHTML=items.length?items.map((i,x)=>`<article class="card"><h3>${esc(i.n)}</h3>${i.p!=null?`<div class="price">₹${i.p}</div>`:''}${i.o?`<label>Choose one<select id="o${x}">${i.o.map(o=>`<option>${esc(o)}</option>`).join('')}</select></label>`:''}<button class="btn" data-x="${x}">Add to enquiry</button></article>`).join(''):'<p class="empty">No items found. Try a different search.</p>';
+}
+$('#grid').onclick=e=>{const b=e.target.closest('[data-x]');if(!b)return;const i=list[+b.dataset.x],o=i.o?$('#o'+b.dataset.x).value:'',k=i.n+(o?' ('+o+')':'');cart[k]=(cart[k]||0)+1;upd()};
+function upd(){
+  const ks=Object.keys(cart).filter(k=>cart[k]>0);let c=0;
+  $('#lines').innerHTML=ks.length?ks.map(k=>{c+=cart[k];const e=encodeURIComponent(k);return `<div class="line"><span>${esc(k)}</span><span class="qty"><button data-k="${e}" data-d="-1" aria-label="Remove one ${esc(k)}">−</button><b>${cart[k]}</b><button data-k="${e}" data-d="1" aria-label="Add one ${esc(k)}">+</button></span></div>`}).join(''):'<p style="padding:12px 0">Your order is empty. Add items from the menu.</p>';
+  $('#cnt').textContent=c;$('#send').disabled=!c;$('#send').style.opacity=c?1:.5;
+}
+$('#lines').onclick=e=>{const b=e.target.closest('[data-k]');if(!b)return;const k=decodeURIComponent(b.dataset.k);cart[k]=Math.max(0,cart[k]+ +b.dataset.d);upd()};
+const sheet=$('#sheet'),tog=o=>{sheet.classList.toggle('open',o);sheet.setAttribute('aria-hidden',!o)};
+$('#fab').onclick=()=>tog(true);$('#close').onclick=()=>tog(false);document.onkeydown=e=>{if(e.key==='Escape')tog(false)};
+$('#send').onclick=()=>{const ks=Object.keys(cart).filter(k=>cart[k]>0);if(!ks.length)return;open(wa(`Hi The Dessert Lounge! I’d like to order:\n${ks.map(k=>`- ${k} × ${cart[k]}`).join('\n')}`),'_blank')};
+render();upd();
+</script></body></html>
